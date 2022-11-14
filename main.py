@@ -1,18 +1,12 @@
-X = 1
-Y = 1
+try:
+    value = int(input("Please input a value between 1 and 10: "))
+except ValueError:
+    print("The value you enter must be a number!!!")
+else:
+    if (1 < value < 10):
+        print(f"The value you entered is : {value}")
+    else:
+        print("The value you entered was not in the correct range!!!")
 
-print('{:>4}'.format(' '), end= ' ')
-
-for X in range(1, 11):
-    print('{:>4}'.format(' '), end=' ')
 
 
-print()
-
-for X in range(1, 11):
-    print('{:>4}'.format(' '), end=' ')
-    while Y <= 10:
-        print('{:>4}'.format(X * Y), end=' ')
-        Y += 1
-    print()
-    Y=1
